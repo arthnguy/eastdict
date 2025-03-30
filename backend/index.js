@@ -12,7 +12,6 @@ app.use(express.json());
 app.use(cors({
     origin: process.env.ORIGIN,
     methods: ["GET"],
-    allowedHeaders: ["Access-Control-Allow-Origin"]
 }));
 app.use("/get", routes);
 
