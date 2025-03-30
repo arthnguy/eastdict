@@ -10,8 +10,6 @@ const App = () => {
   const [inp, setInp] = useState("");
 
   useEffect(() => {
-      if (!/\S/.test(inp)) return;
-
       axios.get(`https://east-dict.onrender.com/get/${inp}`)
       .then((res) => {
           res.data.sort((a, b) => a.etyNum - b.etyNum);
